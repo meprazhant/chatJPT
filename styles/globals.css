@@ -6,6 +6,24 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.main {
+  min-height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: url('https://builtin.com/sites/www.builtin.com/files/styles/ckeditor_optimize/public/inline-images/artificial-intelligence-AI.jpg'); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.answer p {
+  padding: 10px;
+}
+
+
 a {
   color: inherit;
   text-decoration: none;
@@ -15,12 +33,380 @@ a {
   box-sizing: border-box;
 }
 
+.navbar {
+  height: 10vh;
+  background-color: rgb(41, 44, 51);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.navlogo {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.navlogo img {
+  height: 80%;
+}
+
+.navlogo span {
+  font-size: 25px;
+  font-weight: 800;
+
+}
+
+.navmenu {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.navmenu a {
+  font-size: 18px;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 5px;
+}
+
+.navmenu a:hover {
+  color: rgb(205, 205, 205);
+}
+
+.navmenu .active {
+  color: rgb(216, 72, 72);
+  font-weight: 800;
+  border-bottom: 2px solid rgb(216, 72, 72);
+
+}
+
+.navmenu a:last-child {
+  color: rgb(0, 0, 0);
+  background-color: rgb(225, 111, 45);
+  padding: 10px 10px;
+}
+
+.navmenu a:last-child:hover {
+  color: rgb(225, 111, 45);
+  background-color: rgba(0, 0, 0, 0);
+  transition: ease-in-out 0.3s;
+  padding: 10px 10px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: 15vh;
+  }
+
+  .navlogo {
+    height: 50%;
+  }
+
+  .navmenu {
+    height: 50%;
+    gap: 10px;
+  }
+}
+
+
+
+.Homepage {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://hellofuture.orange.com/app/uploads/2018/01/Intro-HELLO-FUTURE-1920x1080_v2.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.homeInfo {
+  width: 60%;
+}
+
+.homeInfo h2 {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 68px;
+  margin: 0;
+}
+
+.homeInfo a {
+  color: rgb(216, 72, 72);
+}
+
+.homeInfo li {
+  font-family: 'PT Sans', sans-serif;
+  margin: 0;
+  list-style: '-> ';
+}
+
+.mobileCompo {
+  height: 600px;
+  width: 270px;
+  border-radius: 18px;
+  background-color: rgb(15, 13, 22);
+  border: 2px solid rgb(107, 107, 107);
+  position: relative;
+  overflow: hidden;
+}
+
+.notch {
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.notchc {
+
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notchcc {
+  height: 10px;
+  width: 10px;
+  background-color: rgba(47, 47, 47, 0.671);
+  border-radius: 50%;
+}
+
+.messageArea {
+  position: absolute;
+  bottom: 0px;
+  /* height: 5%; */
+  width: 100%;
+  /* background-color: #fff; */
+  /* box-sizing: border-box; */
+  padding: 5px;
+  background-color: rgb(15, 13, 22);
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+#qn {
+  height: 100%;
+  border-radius: 50px;
+  padding: 10px;
+  outline: none;
+  border: 0;
+}
+
+#qn:focus {
+  outline: none;
+}
+
+.send svg {
+  fill: rgb(245, 53, 53);
+  cursor: pointer;
+}
+
+.send svg:hover {
+  fill: rgb(255, 0, 0);
+}
+
+.myMsg,
+.aimsg {
+  width: 100%;
+  /* background-color: #fff; */
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.myMsg::-webkit-scrollbar,
+.aimsg::-webkit-scrollbar {
+  display: none;
+}
+
+.aimsg {
+  justify-content: flex-start;
+}
+
+
+.mymessage,
+.myaimessage {
+  font-size: 12px;
+  background-color: rgb(57, 55, 110);
+  padding: 5px;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.myaimessage {
+  background-color: rgb(60, 110, 55);
+}
+
+.mypfp {
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.mypfp img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.message {
+  width: 100%;
+  /* background-color: #fff; */
+  /* display: flex-reverse; */
+  display: flex;
+  flex-direction: column;
+  /* flex-direction: column; */
+  align-items: center;
+  position: relative;
+  max-height: 520px;
+  overflow-y: scroll;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+.message::-webkit-scrollbar {
+  display: none;
+}
+
+
+.typing {
+  display: flex;
+  gap: 5px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.typingdot {
+  height: 10px;
+  width: 10px;
+  background-color: rgb(222, 60, 60);
+  border-radius: 50%;
+  animation: typing 1s infinite;
+}
+
+@keyframes typing {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.mpt {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.mpt img {
+  height: 200px;
+  width: calc(100% - 20px);
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.mpt p {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+
+/* dsa */
+
+@media only screen and (max-width:660px) {
+  .homeInfo {
+    display: none;
+  }
+
+  .mobileCompo {
+    height: calc(100vh);
+    width: 100%;
+    padding: 10px;
+    border-radius: 0;
+    border: 0;
+  }
+
+  .mpt img {
+    height: auto;
+  }
+
+  .mpt p {
+    font-size: 22px;
+  }
+
+  #qn {
+    width: calc(100% - 50px);
+    font-size: 20px;
+  }
+
+  .myaimessage,
+  .mymessage {
+    font-size: 20px;
+  }
+
+  .message {
+    max-height: 100%;
+  }
+
+  .notch {
+    display: none;
+  }
+
+  .message {
+    padding-bottom: 50px;
+  }
+
+  .messageArea {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
   }
 }
