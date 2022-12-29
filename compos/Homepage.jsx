@@ -95,6 +95,7 @@ function Homepage() {
 
     useEffect(() => {
         godown()
+        var name = process.env.NEXT_PUBLIC_NAME
 
     }, [qns])
 
